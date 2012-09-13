@@ -2,7 +2,7 @@
 
 OPA=opa --parser classic $(OPAOPT)
 
-SRC=default_css.opa min_chat.opa wiki_css.opa demo_wiki.opa
+SRC=src/default_css.opa src/min_chat.opa src/wiki_css.opa src/demo_wiki.opa
 
 all: demo_wiki.exe
 
