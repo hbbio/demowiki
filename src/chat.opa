@@ -1,5 +1,3 @@
-/** This is a port of demochat v2 to a module */
-
 //package demowiki.min_chat
 import stdlib.widgets.{core,button}
 

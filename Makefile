@@ -2,9 +2,9 @@
 
 OPA=opa --parser classic $(OPAOPT)
 
-SRC=src/default_css.opa src/min_chat.opa src/wiki_css.opa src/demo_wiki.opa
+SRC=src/chat.opa src/wiki.opa src/main.opa
 
-all: demo_wiki.exe
+all: wiki.exe
 
 demo_wiki.exe: $(SRC)
 	$(OPA) -o $@ $^

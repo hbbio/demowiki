@@ -152,7 +152,7 @@ appframe_config =
 
 /** The public page contains only wiki (read only) */
 public_page(page_title: string) =
-  <><div id="minchat">You are not logged.<br />Login in if you want to edit the pages and acceed the chat.</div>
+  <><div id="minchat">You are not logged in.<br />Login in if you want to edit the pages and acceed the chat.</div>
     {common_page(Wiki_css.default_config, page_title)}
   </>
 
@@ -182,12 +182,12 @@ main_body(title) : xhtml =
  * {2 Server declaration}
  */
 /** Static inclusion of some images */
-img_parser = @static_resource_directory("img")
+style_parser = @static_resource_directory("style")
 
 /** Server URL parser */
 urls = parser
   /* Images */
-  | resource={Server.resource_map(img_parser)} .* -> resource
+  | resource={Server.resource_map(style_parser)} .* -> resource
   /* All other pages */
   | "/" title_opt=(.+)? ->
     page_title = (match title_opt with
@@ -195,4 +195,4 @@ urls = parser
       | {~some} -> Text.to_string(some))
     Resource.page(page_title, main_body(page_title))
 
-server = { Server.simple_server(urls) with server_name = "demowiki" }
+server = { Server.simple_server(urls) with server_name = "wiki" }

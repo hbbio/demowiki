@@ -1,7 +1,3 @@
-css = css
-
-/** General style */
-
 html {
   margin: 0;
   padding: 0;
@@ -32,7 +28,7 @@ p {
 }
 
 h1 {
-  background: url('/img/header2.png') repeat-x 0 0;
+  background: url('/style/header2.png') repeat-x 0 0;
   font-family: helvetica, arial, sans-serif;
   border: none;
   width: 100%;
@@ -56,7 +52,7 @@ h4{
 }
 
 #loginapp_header {
-  background:transparent url(/img/header.png) repeat-x scroll 0 0;
+  background:transparent url(/style/header.png) repeat-x scroll 0 0;
   border-bottom:1px solid #FFFFFF;
   height:40px;
   padding:5px 0;
@@ -67,7 +63,7 @@ h4{
 }
 
 #loginapp_logo {
-  background: url('/img/logo.png') no-repeat 0 0;
+  background: url('/style/logo.png') no-repeat 0 0;
   width:148px;
   height:31px;
   display:block;
@@ -108,7 +104,7 @@ a:active {
 }
 
 a.button, a.clickedbutton, a.notclickedbutton {
-  background : url('/img/btn.png') repeat-x 0 0;
+  background : url('/style/btn.png') repeat-x 0 0;
   color      : #264d73;
 }
 
@@ -211,11 +207,11 @@ a.button:hover, a.clickedbutton:hover, a.notclickedbutton:hover,
 }
 
 #wiki_save {
-  background-image: url('/img/save.png');
+  background-image: url('/style/save.png');
 }
 
 #wiki_cancel {
-  background-image: url('/img/view.png');
+  background-image: url('/style/view.png');
 }
 
 .wiki_textarea {
@@ -246,7 +242,7 @@ a.wiki_button {
   text-align:center;
   font-weight:bold;
   font-size: 13px;
-  background: url('/img/btn_or.png') no-repeat 0 0;
+  background: url('/style/btn_or.png') no-repeat 0 0;
   width: 87px;
   margin: 5px;
   padding: 5px 0;

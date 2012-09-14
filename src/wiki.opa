@@ -1,9 +1,7 @@
-/** This is a module port of Wiki CSS */
-
 //package demowiki.wiki_css
 
 /**
- * This example implements a non-trivial wiki without formatting.
+ * This module implements a non-trivial wiki without formatting.
  * It demonstrates some of the database features of OPA, including
  * full-text search, index manipulation, etc.
  */
