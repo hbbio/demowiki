@@ -17,7 +17,7 @@ idclogin = "idclogin"
  */
 
 /** Type of login datas */
-type Account.tokken = option((string,string))
+type Account.token = option((string,string))
 
 /** Type of a login state */
 type Account.credential = {
@@ -36,9 +36,9 @@ do if not(Db.exists(@/default_users["demo"])) then /default_users["demo"] <- "de
 /**
  * Login configuration
  */
-login_config : CLogin.config(Account.tokken,Account.credential,Account.credential) =
+login_config : CLogin.config(Account.token,Account.credential,Account.credential) =
   /* A function that generate xhtml that allow to logout. */
-  logout_xhtml(name : string, dochange : Account.tokken -> void) =
+  logout_xhtml(name : string, dochange : Account.token -> void) =
     <> {name} - <a onclick={_->dochange(none)}>logout</a> </>
 {
   /* Check (username * password) and returns an optionnal login state  */
@@ -85,9 +85,11 @@ login_config : CLogin.config(Account.tokken,Account.credential,Account.credentia
 /**
  * {1 Build the application }
  */
+
 /**
  * {2 Chat part}
  */
+ 
 /** Initialize the chat room */
 chat_room = Min_chat_server.init()
 
@@ -107,6 +109,7 @@ minchat_config: Min_chat.config = Min_chat.default_config
 /**
  * {2 Wiki part }
  */
+
 get_wiki_config(username: string): Wiki_css.config =
   {
     user=some(username)
@@ -173,9 +176,6 @@ main_body(title) : xhtml =
     loginbox  = CLogin.html(server_state)
   }
   WAppFrame.html(appframe_config, idappframe, action, econtent)
-
-
-
 
 
 /**
