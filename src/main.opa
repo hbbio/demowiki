@@ -193,6 +193,7 @@ urls = parser
     page_title = (match title_opt with
       | {none} -> "Home"
       | {~some} -> Text.to_string(some))
+    do Resource.register_external_css("/style/css.css")
     Resource.page(page_title, main_body(page_title))
 
 server = { Server.simple_server(urls) with server_name = "wiki" }

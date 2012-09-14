@@ -6,7 +6,7 @@ SRC=src/chat.opa src/wiki.opa src/main.opa
 
 all: wiki.exe
 
-demo_wiki.exe: $(SRC)
+wiki.exe: $(SRC)
 	$(OPA) -o $@ $^
 
 clean:
